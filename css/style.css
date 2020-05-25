@@ -1,0 +1,297 @@
+@import 'reset.css';
+
+#video-bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  background-size: cover;
+  z-index: -1;
+}
+
+#video-bg > video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  width: auto;
+  height: auto; 
+}
+
+@supports (object-fit: cover) {
+   #video-bg > video {
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       object-fit: cover;
+   }
+}
+
+.menu-list {  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.menu-list .menu-link{
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 24px;
+  color: #fff;
+  z-index: 1;
+}
+
+.menu-list .menu-link:hover{
+  color: gray;
+}
+
+.container {
+  width: 1170px;
+  margin: 0 auto;  
+}
+
+.logo {
+  width: 150px;
+}
+
+.section__title {
+  font-size: 38px;
+  z-index: 1;
+}
+
+.section-description {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.description__item {
+  flex-basis: 45%;
+  z-index: 1;
+}
+
+.doing .outer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 123px);
+  margin: auto;
+  z-index: 1;
+}
+
+.doing .outer:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.technique {
+  margin-top: 100px;
+}
+
+.contact {  
+  margin-top: 100px;
+}
+
+.about {  
+  margin-top: 100px;
+}
+
+
+
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 960px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    width: 720px;
+  }
+
+  .menu-list .menu-link {
+    font-size: 18px;
+  }
+
+  .about .description__item {
+    flex-basis: 48%;
+  }
+  .description__item {
+    flex-basis: 55%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 540px;
+  }
+
+  .menu-list .menu-link {
+    font-size: 16px;
+  }
+
+  .logo {
+    width: 125px;
+  }
+
+  .description__item {
+    flex-basis: 70%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .container {
+    width: 90%;
+  } 
+
+  .section-description {
+    flex-direction: column;
+    margin-top: 25px;
+  }
+
+  .description__item {
+    flex-basis: 70%;
+    margin-bottom: 10px;
+  }
+
+  .menu-list .menu-link {
+    font-size: 12px;
+  }  
+
+  .logo {
+    width: 65px;
+  }
+
+  .about {
+    margin-top: 40px;
+  }
+
+  .section__title {
+    font-size: 28px;
+  }
+}
+
+.transition-fade {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+html.is-animating .transition-fade {
+  opacity: 0;
+}
+
+.transition-main {
+  transition: 700ms;
+  opacity: 1;
+}
+
+html.is-leaving .transition-main {
+  transform: translateX(-2000px);
+  opacity: 0.7;
+}
+
+html.is-animation .transition-main {
+  transform: translateX(-2000px);
+  opacity: 0.7;
+}
+
+.transition-about {
+  transition: 700ms;
+  opacity: 1;
+}
+
+html.is-animating .transition-about {
+  transform: translateX(2000px);
+  opacity: 0.7;
+}
+
+html.is-leaving .transition-about {
+  opacity: 0;
+  -webkit-transform: scale3d(0.3, 0.3, 0.3);
+  transform: scale3d(0.3, 0.3, 0.3);
+}
+
+.transition-doing {
+  transition: 700ms;
+  opacity: 1;
+}
+
+html.is-animating .transition-doing {
+  opacity: 0;
+  -webkit-transform: scale3d(0.3, 0.3, 0.3);
+  transform: scale3d(0.3, 0.3, 0.3);
+}
+
+html.is-leaving .transition-doing {
+  opacity: 0;
+  transform: translateY(-1000px);
+}
+
+.transition-technique {
+  transition: 700ms;
+  opacity: 1;
+}
+
+html.is-animating .transition-technique {
+  opacity: 0;
+  transform: translateY(1000px);
+}
+
+html.is-leaving .transition-technique {
+  opacity: 0;
+  transform: translateY(1000px);
+}
+
+.transition-contact {
+  transition: 700ms;
+  opacity: 1;
+}
+
+html.is-animating .transition-contact {
+  opacity: 0;
+  transform: translateY(1000px);
+}
+
+html.is-leaving .transition-contact {
+  opacity: 0;
+  transform: translateY(1000px);
+}
+
+
+/* .transition-fromright {
+  transition: 350ms;
+  opacity: 1;
+}
+
+html.is-changing .transition-fromright {
+  transform: translateX(2000px);
+  opacity: 0.7;
+} */
+
+/* .transition-top {
+  transition: 700ms;
+  opacity: 1;
+}
+
+html.is-animating .transition-top {
+  transform: translateY(-2000px);
+  opacity: 0.7;
+}
+
+.transition-down {
+  transition: 700ms;
+  opacity: 1;
+}
+
+html.is-animating .transition-down {
+  transform: translateY(2000px);
+  opacity: 0.7;
+}
+

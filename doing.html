@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dream team</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+  />
+  <link rel="stylesheet" href="css/style.css">  
+</head>
+<body>
+  
+  <header class="header">
+    <div class="container">
+      <nav class="menu-list">
+        <a href="/about.html" class="menu-link animate__animated animate__flash" data-src=1>Кто мы</a>
+        <a href="/doing.html" class="menu-link animate__animated animate__flash" data-src=2>Что делаем</a>
+        <a href="/index.html" class="menu-link animate__animated animate__backInDown" data-src=0><img src="img/logo.png" alt="logo" class="logo"></a>
+        <a href="/technique.html" class="menu-link animate__animated animate__flash" data-src=3>Техника</a>
+        <a href="/contact.html" class="menu-link animate__animated animate__flash" data-src=4>Связаться</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="swup" class="transition-fade">
+    <section class="doing">
+      <div class="container">
+        <div class="outer">
+          <h2 class="section__title">
+            ЧТО ДЕЛАЕМ
+          </h2>
+        </div>
+      </div>
+    </section>
+
+    <div id="video-bg">
+      <video class="videoplayer transition-doing" width="100%" height="auto" preload="auto" autoplay loop muted src="/video/2.mp4"></video>      
+   </div>
+  </main> 
+
+  <script src="js/script.js"></script>
+</body>
+</html>
